@@ -8,7 +8,7 @@ export default function App() {
     alignItems: 'center',
     height: '100vh',
     width: '100vw',
-    background: '#00cbffa1',
+    background: '#137fc4d1',
   };
 
   return (
