@@ -31,13 +31,13 @@ export function TrafficLight() {
 
     switch (counter) {
       case 1:
-        setActiveLight('light-red');
+        setActiveLight('light-green');
         break;
       case 6:
         setActiveLight('light-yellow');
         break;
       case 8:
-        setActiveLight('light-green');
+        setActiveLight('light-red');
         break;
       case 15:
         setCounter(0);
