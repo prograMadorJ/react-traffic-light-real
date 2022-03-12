@@ -64,16 +64,15 @@ export function TrafficLight() {
   );
 
   function Light({ id, color }) {
-    const show = activeLight === id ? 'block' : 'none';
-
     const img = `https://raw.githubusercontent.com/prograMadorJ/react-traffic-light-real/master/public/traffic-light-${color}-background.png`;
 
     const styles = {
-      display: show,
+      visibility: activeLight === id ? 'visible' : 'hidden',
       background: `url("${img}")`,
       width: '100vw',
       height: '100vh',
-      positon: 'relative',
+      position: 'absolute',
+      top: '0',
       zIndex: '1',
     };
 
