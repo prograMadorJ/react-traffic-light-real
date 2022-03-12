@@ -7,7 +7,7 @@ export default function App() {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    background: '#00cbffa1'
+    background: '#00cbffa1',
   };
 
   return (
@@ -48,22 +48,11 @@ export function TrafficLight() {
     };
   }
 
-  // const styles = {
-  //   width: '60px',
-  //   height: '60px',
-  //   borderTop: 'solid 1px red',
-  //   marginTop: '60px',
-  //   transform: `rotateZ(${counter*3}deg)`,
-  //   transformOrigin: '100% 0',
-  //   position: 'absolute'
-  // }
-
   return (
     <TrafficLightContainer>
       <Light id="light-red" color="red" />
       <Light id="light-yellow" color="orange" />
       <Light id="light-green" color="green" />
-      {/* <div style={styles}></div> */}
     </TrafficLightContainer>
   );
 
