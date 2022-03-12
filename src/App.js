@@ -48,24 +48,33 @@ export function TrafficLight() {
     };
   }
 
+  const styles = {
+    width: '100vw',
+    height: '100vh',
+  };
+
   return (
-    <TrafficLightContainer>
-      <Light id="light-red" color="red" />
-      <Light id="light-yellow" color="orange" />
-      <Light id="light-green" color="green" />
-    </TrafficLightContainer>
+    <div style={styles}>
+      <TrafficLightContainer>
+        <Light id="light-red" color="red" />
+        <Light id="light-yellow" color="yellow" />
+        <Light id="light-green" color="green" />
+      </TrafficLightContainer>
+    </div>
   );
 
   function Light({ id, color }) {
-    color = activeLight === id ? color : 'transparent';
+    const show = activeLight === id ? 'block' : 'none';
+
+    const img = `https://raw.githubusercontent.com/prograMadorJ/react-traffic-light-real/master/public/traffic-light-${color}-background.png`;
 
     const styles = {
-      color,
-      background: color,
-      boxShadow: '0 0 18px 2px ' + color + ', 0 5px 10px 0 inset #ffffff55',
-      height: '30px',
-      borderRadius: '30px',
-      margin: '6px 2px',
+      display: show,
+      background: `url("${img}")`,
+      width: '100vw',
+      height: '100vh',
+      positon: 'relative',
+      zIndex: '1',
     };
 
     return <div style={styles}></div>;
@@ -73,11 +82,8 @@ export function TrafficLight() {
 
   function TrafficLightContainer({ children }) {
     const styles = {
-      background: '#333',
-      padding: '3px',
-      width: '34px',
-      maxHeight: '112px',
-      borderRadius: '6px',
+      width: '100vw',
+      height: '100vh',
     };
 
     return <div style={styles}>{children}</div>;
