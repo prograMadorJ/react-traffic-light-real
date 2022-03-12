@@ -7,6 +7,7 @@ export default function App() {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
+    width: '100vw',
     background: '#00cbffa1',
   };
 
@@ -49,8 +50,16 @@ export function TrafficLight() {
   }
 
   const styles = {
-    width: '100vw',
-    height: '100vh',
+    width: '600px',
+    height: '500px',
+    background:
+      'url("https://raw.githubusercontent.com/prograMadorJ/react-traffic-light-real/master/public/traffic-light-background.png")',
+    backgroundSize: 'cover',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    zIndex: '1',
+    margin: '0 auto',
   };
 
   return (
@@ -69,10 +78,12 @@ export function TrafficLight() {
     const styles = {
       visibility: activeLight === id ? 'visible' : 'hidden',
       background: `url("${img}")`,
-      width: '100vw',
-      height: '100vh',
+      backgroundSize: 'cover',
+      width: '600px',
+      height: '500px',
       position: 'absolute',
       top: '0',
+      left: '0',
       zIndex: '1',
     };
 
@@ -81,8 +92,7 @@ export function TrafficLight() {
 
   function TrafficLightContainer({ children }) {
     const styles = {
-      width: '100vw',
-      height: '100vh',
+      margin: '0 auto',
     };
 
     return <div style={styles}>{children}</div>;
