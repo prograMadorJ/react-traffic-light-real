@@ -33,13 +33,13 @@ export function TrafficLight() {
       case 1:
         setActiveLight('light-red');
         break;
-      case 4:
+      case 6:
         setActiveLight('light-yellow');
         break;
-      case 5:
+      case 8:
         setActiveLight('light-green');
         break;
-      case 9:
+      case 15:
         setCounter(0);
         break;
     }
